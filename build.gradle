@@ -1,0 +1,24 @@
+group 'bingo'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "com.bingo.BingoRun"
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.googlecode.soundlibs:jlayer:1.0.1.4'
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M2")
+}
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.bingo.BingoRun'
+        )
+    }
+}
